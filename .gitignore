@@ -1,0 +1,45 @@
+# === Go ===
+# 빌드된 실행 파일
+my-proxy
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# === Zero Knowledge (Circom / SnarkJS) ===
+# 1. 대용량 키 파일 (GitHub 용량 초과 방지)
+*.zkey
+*.ptau
+
+# 2. 컴파일 산출물 및 임시 파일
+build/
+*.r1cs
+*.sym
+*.wtns
+proof.json
+public.json
+
+# 3. 자동 생성된 Witness 파일 (소스가 아니므로 제외)
+jwt_verifier.cpp
+jwt_verifier.dat
+jwt_rs256.cpp
+circuit.dat
+
+# 4. 입력 값 (보안 및 테스트용 데이터)
+input.json
+input_dummy.json
+input_fail.json
+
+# === Node.js (컴파일 도구 사용시 생성) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === IDE & OS ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
